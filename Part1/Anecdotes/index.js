@@ -19,11 +19,12 @@ const Anecdote = (props) => {
 const MostVoted = (props) => {
   return (
     <>
-      <Heading text="Anecdote with Most Votes" />
+     <i> <Heading text="Anecdote with Most Votes" />
       {!props.hasVotes && <>No anecdotes have been voted on yet.</>}
       {props.hasVotes && (
         <Anecdote anecdote={props.anecdote} votes={props.votes} />
       )}
+      </i>
     </>
   );
 };
@@ -83,7 +84,7 @@ const App = (props) => {
 
   return (
     <div>
-      <Heading text="Anecdote of the Day" />
+     <b><i> <Heading text="Anecdote of the Day" /></i></b>
       <Anecdote anecdote={anecdotes[selected]} votes={votes[selected]} />
       <br />
       <Button onClick={() => handleButtonClick("vote")} text="vote" />
