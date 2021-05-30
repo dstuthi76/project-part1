@@ -14,7 +14,7 @@ const Statistics = (props) => {
     const positive = (props.good)/all *100
     if(all===0){
         return (
-            <p>No feedbacks given</p>
+           <b> <i><p>No feedbacks given</p></i></b>
         )
     }
     return (
@@ -28,7 +28,7 @@ const Statistics = (props) => {
                         <td><Statistic text="neutral" value={props.neutral} /></td>
                     </tr>
                     <tr>
-                        <td><Statistic text="bad" value={props.bad} /></td>
+                        <td><Statistic text="baD" value={props.bad} /></td>
                     </tr>
                     <tr>
                         <td><Statistic text="all" value={all} /></td>
@@ -58,11 +58,11 @@ const App = () => {
     
     return (
         <div>
-            <h1> Dear customer, Please give your valuable feedback </h1>
+           <b><i> <h1> DEAR CUSTOMER,PLEASE GIVE YOUR PRECIOUS FEEDBACK SO THAT WE CAN UPDATE IT ACCORDING TO YOUR WISH </h1></i></b>
             <div>
-                <Button event={()=> setGood(good+1)} text="Good" />
-                <Button event={()=> setNeutral(neutral+1)} text="Neutral" />
-                <Button event={()=> setBad(bad+1)} text="Bad" />
+                <Button event={()=> setGood(good+1)} text="good" />
+                <Button event={()=> setNeutral(neutral+1)} text="neutral" />
+                <Button event={()=> setBad(bad+1)} text="baD" />
                                 
             </div>
             <h2>statistics</h2>
